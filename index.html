@@ -2,218 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>leCorbusier – Desarrollo Azul</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css">
-  <script src="https://cdn.jsdelivr.net/npm/ol/ol.js"></script>
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      color: #333;
-      background: #f4f7fa;
-    }
-    header {
-      background: linear-gradient(135deg, #005f99, #007acc), url('https://source.unsplash.com/1600x900/?city,architecture') center/cover no-repeat;
-      color: #fff;
-      padding: 4rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
-      margin: 0.2rem 0;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: #ff7f50;
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #e06b40;
-    }
-    nav {
-      background: #e1eff7;
-      padding: 1rem;
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    nav a {
-      color: #005f99;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #007acc;
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-    }
-    h2 {
-      color: #005f99;
-      margin-top: 1.5rem;
-      font-size: 2rem;
-    }
-    ul {
-      list-style: inside disc;
-      margin-left: 1rem;
-    }
-    #map {
-      width: 100%;
-      height: 400px;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-    .marker {
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      background: #ff4d4d;
-      border: 2px solid #fff;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    footer {
-      background: #005f99;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>leCorbusier</h1>
-    <p>Plataforma “Desarrollo Azul” – Análisis y Recomendación Urbana</p>
-    <a href="#contacto" class="cta-button">Contáctanos</a>
-  </header>
-
   <nav>
-    <a href="#objetivo">Objetivo</a>
-    <a href="#datos">Datos Analizados</a>
-    <a href="#mapa">Mapa Interactivo</a>
-    <a href="#modelo">Modelo de Negocio</a>
-    <a href="#contacto">Contacto</a>
+    <div class="nav-container">
+      <a href="#" class="logo">leCorbusier</a>
+      <div class="nav-links">
+        <a href="#objetivo">Objetivo</a>
+        <a href="#datos">Datos</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#modelo">Modelo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </nav>
 
-  <section id="objetivo">
-    <h2>Objetivo</h2>
-    <p>Facilitar decisiones informadas para proyectos de desarrollo urbano, considerando factores ambientales, sociales, económicos y regulatorios, impulsando así el crecimiento ordenado y sostenible de las ciudades.</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>leCorbusier</h1>
+      <p>Plataforma "Desarrollo Azul" – Análisis y Recomendaciones Urbanas</p>
+      <a href="#mapa" class="btn">Ver mapa interactivo</a>
+    </div>
+  </section>
+  
+  <section id="objetivo" class="section">
+    <div class="container">
+      <h2 class="section-title">Nuestro Objetivo</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-content">
+            <h3>Desarrollo Sostenible</h3>
+            <p>Facilitar decisiones informadas para proyectos de desarrollo urbano, considerando factores ambientales, sociales, económicos y regulatorios, impulsando así el crecimiento ordenado y sostenible de las ciudades.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="datos">
-    <h2>Datos Analizados</h2>
-    <ul>
-      <li>Uso de suelo y catastro</li>
-      <li>Geoestadística y geografía</li>
-      <li>Tipología y nivel socioeconómico</li>
-      <li>Carencias, amenazas y riesgos locales</li>
-      <li>Análisis de mercado (valor de terrenos, comercios)</li>
-      <li>Histórico de plusvalía</li>
-      <li>Datos hídricos y medioambientales</li>
-      <li>Información pública oficial</li>
-      <li>Participación ciudadana</li>
-    </ul>
+  <section id="datos" class="section">
+    <div class="container">
+      <h2 class="section-title">Datos Analizados</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-content">
+            <h3>Datos Urbanos</h3>
+            <ul>
+              <li>Uso de suelo y catastro</li>
+              <li>Geoestadística y geografía</li>
+              <li>Tipología y nivel socioeconómico</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>Datos de Mercado</h3>
+            <ul>
+              <li>Análisis de mercado (valor de terrenos, comercios)</li>
+              <li>Histórico de plusvalía</li>
+              <li>Carencias, amenazas y riesgos locales</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>Información Pública</h3>
+            <ul>
+              <li>Datos hídricos y medioambientales</li>
+              <li>Información pública oficial</li>
+              <li>Participación ciudadana</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="mapa">
-    <h2>Mapa Interactivo de Participación Ciudadana</h2>
-    <p>Haz clic en el mapa para registrar peticiones o apoyar iniciativas existentes.</p>
-    <div class="map-container" id="map"></div>
+  <section id="mapa" class="map-section">
+    <div class="container">
+      <h2 class="section-title">Mapa Interactivo de Participación</h2>
+      <p class="map-description">Haz clic en el mapa para registrar peticiones o apoyar iniciativas existentes en Hermosillo.</p>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
   </section>
 
-  <section id="modelo">
-    <h2>Modelo de Negocio</h2>
-    <ul>
-      <li>Asesoría estratégica a gobiernos (municipal, estatal, nacional)</li>
-      <li>Consultoría para desarrolladoras, constructoras y fondos de inversión</li>
-      <li>Venta de reportes de viabilidad y estudios de mercado locales</li>
-      <li>Licenciamiento de la plataforma para organismos de planeación</li>
-    </ul>
+  <section id="modelo" class="section">
+    <div class="container">
+      <h2 class="section-title">Modelo de Negocio</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-content">
+            <h3>Servicios Gubernamentales</h3>
+            <ul>
+              <li>Asesoría estratégica a gobiernos (municipal, estatal, nacional)</li>
+              <li>Licenciamiento de la plataforma para organismos de planeación</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>Servicios Privados</h3>
+            <ul>
+              <li>Consultoría para desarrolladoras, constructoras y fondos de inversión</li>
+              <li>Venta de reportes de viabilidad y estudios de mercado locales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="implementacion">
-    <h2>Estrategia de Implementación</h2>
-    <ul>
-      <li>Desarrollo de integración de bases de datos públicas y privadas</li>
-      <li>Alianzas con entidades gubernamentales y privadas</li>
-      <li>Programa de incentivos ciudadanos para datos georreferenciados</li>
-    </ul>
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contacta con Nosotros</h2>
+      <p>¿Interesado en nuestros servicios? Estamos aquí para ayudarte.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> contacto@lecorbusier.dev</p>
+        <p><strong>Fecha:</strong> 30 de abril de 2025</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Instagram</a>
+      </div>
+    </div>
   </section>
 
-  <section id="impacto">
-    <h2>Impacto Esperado</h2>
-    <ul>
-      <li>Mejora en calidad y viabilidad de proyectos urbanos</li>
-      <li>Impulso a desarrollos sostenibles e inclusivos</li>
-      <li>Fortalecimiento de colaboración entre gobierno, empresas y ciudadanía</li>
-    </ul>
-  </section>
-
-  <footer id="contacto">
-    <p>© 2025 leCorbusier – Plataforma Desarrollo Azul</p>
-    <p>Contacto: contacto@lecorbusier.dev</p>
+  <footer>
+    <div class="container">
+      <p>© 2025 leCorbusier – Plataforma Desarrollo Azul. Todos los derechos reservados.</p>
+    </div>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Inicializar mapa con OpenLayers
-      const map = new ol.Map({
-        target: 'map',
-        layers: [ new ol.layer.Tile({ source: new ol.source.OSM() }) ],
-        view: new ol.View({ center: ol.proj.fromLonLat([-110.955919, 29.072967]), zoom: 13 })
-      });
-
-      // Configurar capa de vectores para marcadores
-      const vectorSource = new ol.source.Vector();
-      const vectorLayer = new ol.layer.Vector({ source: vectorSource });
-      map.addLayer(vectorLayer);
-
-      // Manejar clics para añadir marcadores
-      map.on('click', function(evt) {
-        const coord = evt.coordinate;
-        const lonLat = ol.proj.toLonLat(coord);
-        const marker = new ol.Feature(new ol.geom.Point(coord));
-        vectorSource.addFeature(marker);
-        alert(`Punto registrado en: lon=${lonLat[0]}, lat=${lonLat[1]}`);
-      });
-    });
-  </script>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/ol/ol.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
