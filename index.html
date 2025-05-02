@@ -1,148 +1,518 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>leCorbusier – Desarrollo Azul</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArquiTec - Proyectos de Arquitectura en Sonora</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añadir fuente de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Añadir librería de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Añadir OpenLayers CSS y JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+    <!-- Añadir Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">leCorbusier</a>
-      <div class="nav-links">
-        <a href="#objetivo">Objetivo</a>
-        <a href="#datos">Datos</a>
-        <a href="#mapa">Mapa</a>
-        <a href="#modelo">Modelo</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>leCorbusier</h1>
-      <p>Plataforma "Desarrollo Azul" – Análisis y Recomendaciones Urbanas</p>
-      <a href="#mapa" class="btn">Ver mapa interactivo</a>
-    </div>
-  </section>
-  
-  <section id="objetivo" class="section">
-    <div class="container">
-      <h2 class="section-title">Nuestro Objetivo</h2>
-      <div class="cards-container">
-        <div class="card">
-          <div class="card-content">
-            <h3>Desarrollo Sostenible</h3>
-            <p>Facilitar decisiones informadas para proyectos de desarrollo urbano, considerando factores ambientales, sociales, económicos y regulatorios, impulsando así el crecimiento ordenado y sostenible de las ciudades.</p>
-          </div>
+    <header class="site-header">
+        <div class="navbar container">
+            <div class="logo">
+                <a href="#hero">ArquiTec</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#modulos">Servicios</a></li>
+                    <li><a href="#equipo">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="datos" class="section">
-    <div class="container">
-      <h2 class="section-title">Datos Analizados</h2>
-      <div class="cards-container">
-        <div class="card">
-          <div class="card-content">
-            <h3>Datos Urbanos</h3>
-            <ul>
-              <li>Uso de suelo y catastro</li>
-              <li>Geoestadística y geografía</li>
-              <li>Tipología y nivel socioeconómico</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3>Datos de Mercado</h3>
-            <ul>
-              <li>Análisis de mercado (valor de terrenos, comercios)</li>
-              <li>Histórico de plusvalía</li>
-              <li>Carencias, amenazas y riesgos locales</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3>Información Pública</h3>
-            <ul>
-              <li>Datos hídricos y medioambientales</li>
-              <li>Información pública oficial</li>
-              <li>Participación ciudadana</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="hero" class="hero">
+            <div class="particles"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Tu mapa de ruta para materializar tu proyecto y crecer en Hermosillo</h1>
+                    <p>Descubre los proyectos arquitectónicos más destacados y conoce el desarrollo urbano de nuestra región.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#" class="btn btn-outline">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="mapa" class="map-section">
-    <div class="container">
-      <h2 class="section-title">Mapa Interactivo de Participación</h2>
-      <p class="map-description">Haz clic en el mapa para registrar peticiones o apoyar iniciativas existentes en Hermosillo.</p>
-      <div class="map-container">
-        <div id="map"></div>
-      </div>
-    </div>
-  </section>
+        <section id="proyectos" class="featured-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Mapa de Proyectos Arquitectónicos</h2>
+                <p class="section-subtitle">Explora los principales proyectos de desarrollo urbano y arquitectónico en Hermosillo, Sonora</p>
+                
+                <!-- Contenedor del mapa con controles -->
+                <div class="map-container">
+                    <div id="map" style="width: 100%; height: 500px;"></div>
+                    
+                    <!-- Controles del mapa -->
+                    <div class="map-controls">
+                        <button id="zoomIn" title="Acercar"><i class="fas fa-plus"></i></button>
+                        <button id="zoomOut" title="Alejar"><i class="fas fa-minus"></i></button>
+                        <button id="locateMe" title="Mi ubicación"><i class="fas fa-location-arrow"></i></button>
+                        <button id="toggleFilters" title="Filtros"><i class="fas fa-filter"></i></button>
+                    </div>
+                    
+                    <!-- Filtros de proyectos -->
+                    <div class="map-filters">
+                        <div class="project-filter">
+                            <h4>Tipo de Proyecto</h4>
+                            <button data-project-type="all" class="active">Todos</button>
+                            <button data-project-type="residential">Residencial</button>
+                            <button data-project-type="commercial">Comercial</button>
+                            <button data-project-type="industrial">Industrial</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedor de notificaciones -->
+                    <div class="notification-container"></div>
+                </div>
+            </div>
+        </section>
 
-  <section id="modelo" class="section">
-    <div class="container">
-      <h2 class="section-title">Modelo de Negocio</h2>
-      <div class="cards-container">
-        <div class="card">
-          <div class="card-content">
-            <h3>Servicios Gubernamentales</h3>
-            <ul>
-              <li>Asesoría estratégica a gobiernos (municipal, estatal, nacional)</li>
-              <li>Licenciamiento de la plataforma para organismos de planeación</li>
-            </ul>
-          </div>
+        <!-- Sección de KPIs y Estadísticas -->
+        <section id="estadisticas" class="kpi-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Estadísticas del Sector</h2>
+                <p class="section-subtitle">Datos relevantes sobre el desarrollo arquitectónico y urbano en Sonora</p>
+                
+                <div class="kpi-grid">
+                    <!-- KPI 1 -->
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Proyectos Activos</h3>
+                            <div class="kpi-value" data-value="78">0</div>
+                            <div class="kpi-description">Proyectos arquitectónicos en desarrollo</div>
+                        </div>
+                    </div>
+                    
+                    <!-- KPI 2 -->
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Inversión Total</h3>
+                            <div class="kpi-value" data-value="1250">0</div>
+                            <div class="kpi-suffix">MDP</div>
+                            <div class="kpi-description">Millones de pesos invertidos en 2025</div>
+                        </div>
+                    </div>
+                    
+                    <!-- KPI 3 -->
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Empleos Generados</h3>
+                            <div class="kpi-value" data-value="3450">0</div>
+                            <div class="kpi-description">Puestos de trabajo en el sector</div>
+                        </div>
+                    </div>
+                    
+                    <!-- KPI 4 -->
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Crecimiento Anual</h3>
+                            <div class="kpi-value" data-value="28">0</div>
+                            <div class="kpi-suffix">%</div>
+                            <div class="kpi-description">Incremento respecto al año anterior</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Barras de progreso -->
+                <div class="progress-section">
+                    <h3>Distribución por Tipo de Proyecto</h3>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Residencial</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="42"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Comercial</span>
+                            <span>28%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="28"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Industrial</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="15"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Espacios Públicos</span>
+                            <span>8%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="8"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Infraestructura</span>
+                            <span>7%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="7"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="destacados" class="info-section fade-in-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Proyectos Destacados</h3>
+                        <p>Conoce los proyectos más importantes que están transformando el paisaje urbano de Hermosillo.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Inversión y Desarrollo</h3>
+                        <p>Análisis de la inversión en infraestructura y su impacto en el desarrollo económico regional.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sostenibilidad</h3>
+                        <p>Iniciativas para crear espacios urbanos sostenibles adaptados al clima desértico de Sonora.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de estadísticas y gráficas -->
+        <section id="desarrollo" class="stats-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Estadísticas de Desarrollo Urbano</h2>
+                <p class="section-subtitle">Análisis cuantitativo de la inversión y desarrollo en arquitectura en Sonora</p>
+                
+                <div class="stats-grid">
+                    <!-- KPIs en una sola línea -->
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-value">78</div>
+                            <div class="stat-label">Proyectos Activos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">$3.2B</div>
+                            <div class="stat-label">Inversión Total MXN</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">14.3K</div>
+                            <div class="stat-label">Empleos Generados</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">42%</div>
+                            <div class="stat-label">Proyectos Sostenibles</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gráficas en una línea debajo -->
+                    <div class="charts-container">
+                        <div class="chart-wrapper">
+                            <h3 class="chart-title">Inversión por Tipo de Proyecto</h3>
+                            <canvas id="investmentChart"></canvas>
+                        </div>
+                        <div class="chart-wrapper">
+                            <h3 class="chart-title">Proyectos por Zona</h3>
+                            <canvas id="projectsChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Gráfica de tendencia -->
+                    <div class="trend-chart-wrapper">
+                        <h3 class="chart-title">Tendencia de Inversión (2020-2025)</h3>
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Sección de Módulos Funcionales -->
+    <section id="modulos" class="modules-section fade-in-section">
+        <div class="container">
+            <h2 class="section-title">Módulos Funcionales: Desarrollo Azul</h2>
+            <p class="section-subtitle">Soluciones integrales para la planificación urbana inteligente</p>
+            
+            <div class="modules-grid">
+                <!-- Módulo 1 -->
+                <div class="module-card">
+                    <div class="module-number">01</div>
+                    <h3 class="module-title">Análisis de viabilidad urbana</h3>
+                    <p class="module-description">Evaluación profunda de factibilidad técnica, económica y social para intervenciones urbanas. Integra datos catastrales, socioeconómicos, ambientales y de mercado para generar informes con puntuaciones, alertas y recomendaciones.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                </div>
+                
+                <!-- Módulo 2 -->
+                <div class="module-card">
+                    <div class="module-number">02</div>
+                    <h3 class="module-title">Análisis geoespacial</h3>
+                    <p class="module-description">Mapas interactivos multicapa que visualizan límites, zonas de riesgo, redes de transporte y densidad poblacional. Permite activar/desactivar capas y superponer indicadores para identificar oportunidades y vulnerabilidades.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Módulo 3 -->
+                <div class="module-card">
+                    <div class="module-number">03</div>
+                    <h3 class="module-title">Participación ciudadana</h3>
+                    <p class="module-description">Plataforma para que los ciudadanos creen peticiones georreferenciadas, apoyen o rechacen propuestas, y aporten comentarios estructurados, recibiendo incentivos canjeables por beneficios locales.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                
+                <!-- Módulo 4+ ocultos -->
+                <div class="module-card hidden">
+                    <div class="module-number">04</div>
+                    <h3 class="module-title">Modelos predictivos y recomendación</h3>
+                    <p class="module-description">Algoritmos de machine learning que estiman la probabilidad de éxito de proyectos y sugieren ajustes en ubicación, densidad, usos de suelo y cronogramas, presentados en paneles interactivos.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">05</div>
+                    <h3 class="module-title">Integración de datos oficiales y privados</h3>
+                    <p class="module-description">Procesos ETL regulares para consolidar información de fuentes oficiales, encuestas ciudadanas y datasets privados, asegurando análisis sobre datos actualizados y completos.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">06</div>
+                    <h3 class="module-title">Gestión de proyectos urbanos</h3>
+                    <p class="module-description">Herramienta para que desarrolladores y gobiernos registren proyectos, asignen responsables e hitos, con tableros de seguimiento para monitorear aprobaciones, avances y comentarios ciudadanos.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">07</div>
+                    <h3 class="module-title">Colaboración multiactor</h3>
+                    <p class="module-description">Espacio colaborativo para funcionarios, consultores, arquitectos y líderes comunitarios, con foros, mensajería y repositorio compartido de documentos, con roles y permisos diferenciados.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">08</div>
+                    <h3 class="module-title">Reportes y exportación</h3>
+                    <p class="module-description">Generación de reportes personalizados en PDF o PowerPoint combinando mapas, tablas, gráficos y texto explicativo, con capacidad de exportar datasets geoespaciales o tablas.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">09</div>
+                    <h3 class="module-title">Indicadores de sostenibilidad e innovación</h3>
+                    <p class="module-description">Métricas específicas de huella de carbono, eficiencia energética, inclusión social y circularidad de recursos, medidas con fórmulas estandarizadas y visualizadas en dashboards dedicados.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">10</div>
+                    <h3 class="module-title">Visualización avanzada</h3>
+                    <p class="module-description">Dashboards interactivos con filtros por zona, periodo y categoría, incluyendo series temporales, mapas de calor y diagramas de redes, optimizados para múltiples dispositivos.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">11</div>
+                    <h3 class="module-title">Seguridad y permisos</h3>
+                    <p class="module-description">Sistema con autenticación multifactor y control de acceso por roles, registrando cada acción en logs de auditoría para garantizar trazabilidad y cumplimiento normativo.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">12</div>
+                    <h3 class="module-title">Gamificación e incentivos</h3>
+                    <p class="module-description">Sistema de badges y niveles que premian la participación ciudadana, permitiendo canjear puntos por cupones locales, sorteos de entradas o descuentos en servicios municipales.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+                
+                <div class="module-card hidden">
+                    <div class="module-number">13</div>
+                    <h3 class="module-title">Cumplimiento regulatorio</h3>
+                    <p class="module-description">Repositorio de normativas urbano-territoriales por estado y municipio, con motor de validación que alerta sobre incumplimientos para prevenir retrabajos y sanciones.</p>
+                    <div class="module-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modules-actions" style="text-align:center; margin-top: var(--spacing-lg);">
+                <button id="toggleModules" class="btn btn-outline">Ver más</button>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <h3>Servicios Privados</h3>
-            <ul>
-              <li>Consultoría para desarrolladoras, constructoras y fondos de inversión</li>
-              <li>Venta de reportes de viabilidad y estudios de mercado locales</li>
-            </ul>
-          </div>
+    </section>
+
+    <!-- Nueva sección de equipo -->
+    <section id="equipo" class="team-section fade-in-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="section-subtitle">Conoce a los integrantes que hacen posible ArquiTec</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGMvxG15QZE-A/profile-displayphoto-shrink_800_800/B4EZTcyWq.HgAk-/0/1738870975621?e=1751500800&v=beta&t=6r3O6-Fyy5Vfb6Zp5tdhaXQeL-4sPbYRWseGPx77B-I" alt="Jesus">
+                    </div>
+                    <h3 class="member-name">Jesus</h3>
+                    <p class="member-role">Arquitecto Principal</p>
+                    <p class="member-bio">Especialista en diseño urbano sostenible con enfoque en la adaptación de espacios al clima desértico de Sonora.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGMvxG15QZE-A/profile-displayphoto-shrink_800_800/B4EZTcyWq.HgAk-/0/1738870975621?e=1751500800&v=beta&t=6r3O6-Fyy5Vfb6Zp5tdhaXQeL-4sPbYRWseGPx77B-I" alt="Gael">
+                    </div>
+                    <h3 class="member-name">Gael</h3>
+                    <p class="member-role">Diseñador de Proyectos</p>
+                    <p class="member-bio">Experto en visualización 3D y desarrollo de conceptos innovadores para proyectos comerciales y residenciales.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQHidMh8cVz_rA/profile-displayphoto-shrink_400_400/B56ZQfL4SGGsAg-/0/1735689996466?e=1751500800&v=beta&t=_5y1nIn_rKkHByx76vvbjL2tv0MyuyUdK0N_mZvXLUw" alt="Julieta">
+                    </div>
+                    <h3 class="member-name">Julieta</h3>
+                    <p class="member-role">Coordinadora de Desarrollo</p>
+                    <p class="member-bio">Especialista en gestión de proyectos urbanos con enfoque en el impacto social y económico en la comunidad.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contacto" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">Contacta con Nosotros</h2>
-      <p>¿Interesado en nuestros servicios? Estamos aquí para ayudarte.</p>
-      <div class="contact-info">
-        <p><strong>Email:</strong> contacto@lecorbusier.dev</p>
-        <p><strong>Fecha:</strong> 30 de abril de 2025</p>
-      </div>
-      <div class="social-links">
-        <a href="#" class="social-link">LinkedIn</a>
-        <a href="#" class="social-link">Twitter</a>
-        <a href="#" class="social-link">Instagram</a>
-      </div>
-    </div>
-  </section>
+    <footer id="contacto" class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">ArquiTec</a>
+                    <p>Explorando la arquitectura y el desarrollo urbano en Sonora.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Blvd. Luis Encinas, Hermosillo, Sonora</p>
+                    <p><i class="fas fa-phone"></i> (662) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@arquitec.mx</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArquiTec. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 leCorbusier – Plataforma Desarrollo Azul. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/ol/ol.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>
